@@ -15,6 +15,14 @@ name=$(sed -n 's/^name: //p' "$S/SKILL.md" | head -1)
 [[ "$name" == "$S" ]] && ok "name: $name" || bad "name is '$name', expected '$S'"
 desc=$(sed -n 's/^description: //p' "$S/SKILL.md" | head -1)
 [[ -n "$desc" && ${#desc} -le 1024 ]] && ok "description: ${#desc} characters" || bad "description missing or longer than 1024 (${#desc})"
+# parse the frontmatter as strict yaml (github and other tools reject what lenient parsers accept)
+if python3 -c 'import yaml' 2>/dev/null; then
+  python3 -c '
+import sys, yaml
+m = yaml.safe_load(open(sys.argv[1]).read().split("---")[1])
+assert isinstance(m, dict) and m.get("name") and m.get("description")' "$S/SKILL.md" 2>/dev/null \
+    && ok "frontmatter parses as yaml" || bad "frontmatter is not valid yaml (quote values that contain ': ')"
+else bad "PyYAML missing: cannot parse the frontmatter (pip install pyyaml)"; fi
 lines=$(wc -l < "$S/SKILL.md" | tr -d ' ')
 [[ $lines -le 500 ]] && ok "SKILL.md: $lines lines" || bad "SKILL.md: $lines lines (> 500)"
 

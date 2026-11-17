@@ -63,3 +63,5 @@ The library publishes its own skill: a mental model, an API reference and common
 The skill tells the agent to compare the installed version with the version it describes. If the installed one is
 older, the agent asks the user to update. If it is newer, the skill is outdated, and the agent points to the current
 skill. Keep the skill in the repo and regenerate its API reference from the code, so it cannot drift.
+The frontmatter must be strict YAML: quote the `description` if it contains `: ` (lenient parsers accept it, GitHub
+and other tools do not), and parse it in CI.
