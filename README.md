@@ -14,6 +14,25 @@ The skill is in [`alice-analyser/`](alice-analyser/SKILL.md). Start with `SKILL.
 
 ## Install
 
+**Easiest:** in Claude Code, paste *"Install the skill from https://github.com/mario-krueger/alice-analyser"*.
+In the Claude apps (claude.ai, desktop chat), download `alice-analyser.skill` from the
+[latest release](https://github.com/mario-krueger/alice-analyser/releases/latest) and add it as a skill.
+
+### For the agent doing the installation
+
+Install for the user's Claude Code, all projects. Ask the user before writing outside the current project.
+1. If `~/.claude/skills/alice-analyser` already exists, stop and ask (it may be another version; update it instead
+   with `git -C ~/src/alice-analyser pull`).
+2. `git clone https://github.com/mario-krueger/alice-analyser.git ~/src/alice-analyser`
+   (or another folder the user prefers).
+3. `mkdir -p ~/.claude/skills && ln -s ~/src/alice-analyser/alice-analyser ~/.claude/skills/alice-analyser`
+4. Check: `head -3 ~/.claude/skills/alice-analyser/SKILL.md` shows `name: alice-analyser`.
+5. Tell the user: the skill is available from the next session on; update with `git -C ~/src/alice-analyser pull`.
+
+For a single project instead: copy or symlink the `alice-analyser/` folder into `<project>/.claude/skills/`.
+
+### By hand
+
 **Claude Code, for all your projects** (clone once, update with `git pull`):
 ```bash
 git clone https://github.com/mario-krueger/alice-analyser.git ~/src/alice-analyser
@@ -51,6 +70,7 @@ that would overwrite its input), with and without the skill. Feedback and issues
 - `scripts/check.sh` runs the repository checks (frontmatter, links, script syntax, privacy scan) and builds
   `dist/alice-analyser.skill`. CI runs the same on every push and attaches the `.skill` file to a release for each
   tag `v<version>` (the tag must match `VERSION`).
-- One change per commit; update `CHANGELOG.md` and `VERSION` for each release.
+- One change per commit. For a release: bump `VERSION`, the version in `alice-analyser/SKILL.md` (header and version
+  check; `scripts/check.sh` verifies they match), add a `CHANGELOG.md` entry, then tag `v<version>`.
 
 License: [MIT](LICENSE).

@@ -50,6 +50,8 @@ if [[ "${1:-}" == --tag ]]; then
   echo "== version"
   [[ "${2:-}" == "v$(cat VERSION)" ]] && ok "tag ${2} matches VERSION" || bad "tag '${2:-}' does not match VERSION $(cat VERSION)"
 fi
+n=$(grep -o "alice-analyser $(cat VERSION)\*\*" "$S/SKILL.md" | wc -l | tr -d ' '); c=$(grep -c "newer than $(cat VERSION)," "$S/SKILL.md")
+[[ $n -eq 1 && $c -eq 1 ]] && ok "SKILL.md states version $(cat VERSION) (header and version check)" || bad "SKILL.md version does not match VERSION $(cat VERSION) (header $n, check $c)"
 grep -q "^## $(cat VERSION)$" CHANGELOG.md && ok "CHANGELOG has an entry for $(cat VERSION)" || bad "CHANGELOG has no entry for $(cat VERSION)"
 
 echo "== build"

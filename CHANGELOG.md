@@ -13,3 +13,5 @@ First public version.
   offline corrections, plotting, Python and ROOT, pitfalls, links, library development.
 - Templates (notebook, CLAUDE.md, study README, dry-run plan script, .gitignore) and scripts (`root_filecmp.C`,
   `check_tools.sh`).
+- Version check: once per session the agent compares its version with the latest release and, if outdated, tells
+  the user in one line how to update.

@@ -16,5 +16,5 @@ Start with SKILL.md. The references are read on demand, when the situation in th
 
 ## Repository
 
-- [README.md](README.md): install and update
+- [README.md](README.md): install and update (section "For the agent doing the installation": exact steps for an agent)
 - [CHANGELOG.md](CHANGELOG.md): what changed between versions
