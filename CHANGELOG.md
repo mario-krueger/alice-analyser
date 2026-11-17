@@ -4,6 +4,14 @@ What changed for users between versions. Newest first.
 
 ## Unreleased
 
+- Collaboration: "a yes covers only what the question named". Questions name the exact object and action; before
+  asking, the agent lists everything the answer would set in motion and states the non-obvious consequences in the
+  question ("This also changes: … It does not change: …"); separate decisions and self-picked defaults are asked on
+  their own, never bundled; after the yes, one line on what it covers, and a new question if more turns out to be
+  needed. Every answer option (button, numbered option, "yes") states in one crisp sentence what happens when it is
+  chosen, to which objects, and where it stops, so that it allows only one reading (`SKILL.md` §1 and §2,
+  `references/collaboration.md` §4, §7).
+
 - Git: write for the reader who was not there. What makes a commit useful and what is annoying or useless (private
   step IDs and section numbers, unexplained hashes, dates of local events, commits that only document local
   state, diary text in tracked files). Step IDs are no longer recommended in commit messages

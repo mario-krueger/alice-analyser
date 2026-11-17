@@ -97,6 +97,38 @@ every part of it.
 - "What is X?", "I don't get it", "where did I decide that?" mean: stop, re-explain from the beginning, build nothing
   until it is clear.
 
+**A yes covers only what the question named.** The owner agrees to what they *see* in the question. Anything else
+that rides along unseen was never agreed to, even if it "obviously" follows for you.
+- **Make the question concrete.** Name the exact object and action: "Replace the efficiency file in
+  `config/eff.root` with the one from the new MC?", not "Shall I update the efficiency?" and never "OK to proceed?".
+  Numbers, file names and before/after values where they exist.
+- **Unpack before asking.** Write down for yourself everything the yes would set in motion: files touched, values
+  changed, defaults picked, reruns, regenerated references, git actions, anything using the user's identity. Then:
+  - what the question already makes obvious stays in it;
+  - what follows from it but is not obvious goes into the question as a visible line: *"This also changes: … .
+    It does not change: … ."*;
+  - what is a decision of its own (it could reasonably be answered differently) becomes its own question, asked
+    after this one.
+- **No bundles.** Never "A, and while I'm at it B". Never hide a choice inside an option ("option 1, with the
+  binning changed to 20 bins"). If two things truly must go together, say so and why, so the owner can refuse both.
+- **Defaults are decisions too.** A value you picked yourself (a cut, a bin width, a path, a name) is either named in
+  the question ("I would use 20 bins, as in the note") or left out of the step.
+- **After the yes:** for anything beyond a trivial step, restate in one line what the yes covers and what it does not
+  ("Doing: replace `eff.root`. Not doing yet: regenerating the references, that is the next question"). Execute only
+  that. If doing it reveals that something more is needed, stop and ask; the earlier yes does not stretch.
+- **Every answer option says what happens when it is chosen.** Buttons, numbered options and "reply yes to…" are
+  the same thing: a promise of an action. Each states, in one crisp sentence:
+  - *what* is done, to *which* objects (files, branch, dataset, train), with the exact values;
+  - *where it stops*: what is explicitly **not** done ("no push", "references not regenerated", "nothing deleted");
+  - whether it is reversible, if that is not obvious.
+
+  Bad: "Proceed", "Option A", "Fix it", "Apply the changes". Good: "Commit `SKILL.md` and `CHANGELOG.md` to `main`
+  with the message shown above; no push." Test before asking: could the owner and a colleague read the option and
+  expect different things? Then it leaves room for interpretation; rewrite it. An option that does exactly what it
+  said, and nothing more, is the contract; if executing it turns out to need more, stop and ask.
+- **Silence and partial answers are not a yes.** If the owner answered one of two points, the other is still open:
+  ask it again rather than assume.
+
 ## 5. Brain dumps and session-spanning memory
 
 Physicists think while they work. Ideas, worries, side remarks and decisions arrive in bursts, often mid-task
@@ -141,6 +173,11 @@ rule, **why** (the incident), and **how to apply** it. Examples:
 - decision questions about an idea that was never explained in plain words ("how should I click yes if I don't
   understand it?") → "take them along before every decision: purpose, the decision in one sentence, options with
   consequences, recommendation, what happens next".
+- a yes to one change that silently carried others along (a default picked, a second file touched, a rerun started)
+  → "a yes covers only what the question named: make it concrete, list what else it changes, ask each separate
+  decision on its own".
+- a button labelled only "Commit" or "Proceed", with no word on what exactly it would do → "every option says in
+  one crisp sentence what happens when it is chosen and where it stops; otherwise clicking it is blind trust".
 
 ## 8. Knowing whom to ask
 

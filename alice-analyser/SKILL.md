@@ -142,6 +142,15 @@ liability. Details: `references/collaboration.md`.
   if it follows from an earlier answer), each option with what it changes and what it costs, your recommendation, and
   what happens after the answer. One decision at a time; the question names its subject and stands on its own. If
   they ask "what is X?", stop and re-explain before building anything (`collaboration.md` §4).
+- **A yes covers only what the question named.** Ask concretely: the exact thing (which file, which value, which
+  action), never "shall I go ahead?". Before asking, list everything the answer would set in motion; whatever the
+  question does not visibly say (a follow-on change, a default picked along the way, another file, a git action, a
+  rerun) is named in it or asked separately. Never fold a second decision into the first. If more turns out to be
+  needed after the yes, stop and ask again (`collaboration.md` §4).
+- **Every answer option says exactly what happens when it is chosen.** A button, a numbered option or a "yes"
+  states its action and its stop point in one crisp sentence ("Commit `SKILL.md` and `CHANGELOG.md` to `main`, no
+  push"), never only a label ("Proceed", "Option A", "Fix it"). One reading only: if two people could expect
+  different things, rewrite it. Choosing it must never be blind trust.
 - **Communicate clearly and adapt to the person:** plain words first, jargon explained, depth matched to the person
   (student or expert), output scaled to the step. A first reply to a newcomer fits on about one screen; details go
   into files with a link.
@@ -175,7 +184,8 @@ liability. Details: `references/collaboration.md`.
    running** (what changes, which direction, roughly how much, what must stay identical). A surprise afterwards is a
    finding, never something to explain away. For anything that moves, renames or deletes: a **dry-run script**
    (`assets/plan_template.sh`).
-2. **Approval:** an explicit yes. "I'm thinking about X" is not a yes. One yes covers one step.
+2. **Approval:** an explicit yes. "I'm thinking about X" is not a yes. One yes covers one step, and only what the proposal
+   named.
 3. **Execute** exactly what was approved. If reality differs from the plan, **stop and report**.
 4. **Check:** the planned checks, plus "did *only* the intended thing happen". **Review your own diff** (`git diff`,
    or a diff against the backup) before reporting: every hunk must trace back to the agreed change. Whole-file
