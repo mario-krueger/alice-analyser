@@ -17,6 +17,7 @@ keep it.
 | `README.md` | how to use the project's tools | agent, reviewed | yes |
 | `env.sh` (+ `env.local.sh`) | all machine-specific paths and settings (local overrides untracked) | agent | `env.sh` yes |
 | `docs/PROJECT.md` | **the notebook**: state, goals, plan, findings, decisions, questions (sections below) | both | no (private) |
+| `docs/TRIALS.md` | **the trial log**: every closed trial as question → attempt → test → result → verdict → valid while / revisit if; permanent, never cleaned out (`assets/TRIALS_template.md`) | agent, owner reviews | no (private) |
 | `docs/<topic>.md` | a topic note too long for the notebook (see name patterns) | agent | no |
 | `docs/<ID>_plan.sh`, `docs/<ID>_resume.sh` | dry-run plan scripts of risky steps, kept as executed | agent | no |
 | `docs/pr/<name>/PR_DESCRIPTION.md`, `PR_GITHUB.md` | long and copy-ready PR texts, updated with every change | agent | no |
@@ -72,6 +73,8 @@ Status markers everywhere: ✅ done · 🔧 in progress · ⏳ next · 💬 need
 From time to time (at the end of a larger step, or when a document gets long), review the living documents and
 *propose* a clean-up to the owner:
 - remove what is done or irrelevant from §0, §2, §6 and §7 (results stay in §4, decisions in §5);
+- before a concluded finding leaves §4, make sure its trial-log entry exists (`docs/TRIALS.md`); the log is never
+  cleaned out;
 - compress §0 to the current state (history belongs in §4/§5, not in the handover);
 - move obsolete study rows in §9 out once their results are recorded;
 - renumber status-board IDs when they have grown large (with the owner's OK). Don't renumber findings (§4.N) or

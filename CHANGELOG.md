@@ -4,6 +4,11 @@ What changed for users between versions. Newest first.
 
 ## Unreleased
 
+- Trial log `docs/TRIALS.md`: a permanent record of every closed trial, null results especially, as question →
+  attempt → test → result → verdict → valid while / revisit if. Prevents repeating dead ends, shows when one is
+  worth reopening, and states at the wrap-up what was tested (`assets/TRIALS_template.md`, `SKILL.md`,
+  `references/file-conventions.md`, `references/project-structure.md` §5, `references/analysis-design.md` §0).
+
 - Commit message form: brief imperative lowercase title without a final period; a body only when needed, with what,
   why and impact, never repeating the title (`references/analysis-design.md` §4).
 - Communication: say each thing once, no repetition across summary, recap and closing (`references/collaboration.md`

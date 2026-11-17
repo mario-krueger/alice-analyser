@@ -56,6 +56,12 @@ cuts, not physics"). It is thrown away or rebuilt once the concept is agreed.
 later" for what doesn't block the start. The concept is a living document, not a contract: update it, dated, when
 findings change it. A two-day exploration needs a paragraph, a thesis analysis a few pages.
 
+**Exploration leaves a trail.** While the path is still unclear, many ideas get tried and most lead nowhere. Each
+closed trial gets an entry in the trial log (`docs/TRIALS.md`, `assets/TRIALS_template.md`): question, attempt,
+test, result, verdict, and the conditions under which the verdict holds or should be revisited. The studies may go;
+the log stays. It prevents repeating dead ends, shows when one is worth reopening, and at the end states the
+boundaries of what was tested.
+
 ## 1. Helping a user structure their work (coaching mode)
 
 - **Start from the result.** What is the final plot/table/number, for which systems, with which uncertainties, and

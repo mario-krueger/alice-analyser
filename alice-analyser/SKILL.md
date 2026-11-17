@@ -46,7 +46,7 @@ file; "notebook §0" means a section of the project notebook.)
 | official docs and other sources | `references/links.md` |
 | developing a library/tool with users | `references/library-development.md` |
 
-`assets/`: templates (notebook, CLAUDE.md, study README, dry-run plan script, `.gitignore`). `scripts/`:
+`assets/`: templates (notebook, trial log, CLAUDE.md, study README, dry-run plan script, `.gitignore`). `scripts/`:
 `root_filecmp.C` (exact ROOT file comparison; copy it into the study folder before use, since ACLiC writes next to it)
 and `check_tools.sh` (read-only environment report).
 
@@ -265,7 +265,7 @@ Details: `references/project-structure.md`, names in `references/file-convention
 <project>/                  umbrella (git: tools only)
 ├── CLAUDE.md  README.md  env.sh      rules, usage, all paths
 ├── bin/ config/ tests/     tools, configurations, regression suite         (tracked)
-├── docs/                   PROJECT.md notebook, topic notes, PR texts, plan scripts   (local, private)
+├── docs/                   PROJECT.md notebook, TRIALS.md trial log, topic notes, PR texts, plan scripts (local)
 ├── share/                  the user's material for the agent                (user-only)
 ├── workbench/<YYYY-MM-DD>_<topic>/   studies with README.md                 (playground)
 ├── runs/  datasets/dev/  input/      runs with provenance, our datasets, samples (playground)
@@ -287,6 +287,10 @@ roadmap, §2 status, §3 plan, §4 findings, §5 decisions, §6 questions, §7 b
 - **Keep the goal table visible** and order the roadmap by it. Work that serves no goal goes to the backlog.
 - **Hypotheses with tests:** candidate explanations, each with the measurement that would confirm or kill it.
   Cheapest test first.
+- **Keep a trial log** (`docs/TRIALS.md`, `assets/TRIALS_template.md`): every closed trial, null results
+  especially, as question → attempt → test → result → verdict → valid while / revisit if, in the words of the
+  problem so it survives setup changes. Never cleaned out. Search it before proposing an idea; use it at the wrap-up
+  to state what was tested.
 - **Numbers first, then decide:** quantify how often a case occurs and what it changes before changing a treatment.
 - **A standard candle:** one end-to-end comparison with a known result, rerun after every chain change.
 - **Small samples locally, statistics on Hyperloop;** judge local results with their sample size in mind.

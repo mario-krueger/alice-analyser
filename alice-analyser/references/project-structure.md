@@ -105,8 +105,9 @@ Keep the owner's own wording for decisions where it matters ("owner, 2026-11-16:
   results with numbers and plot paths, caveats, next stage.
 - For a multi-step change: a **step log** in the README — one section per step with the change, the reasoning and a
   `check | result` table.
-- When finished: result into the notebook (§4), row into the studies index (§9), durable tools promoted (with OK),
-  then the folder may be deleted (with OK).
+- When finished: result into the notebook (§4), an entry into the trial log (`docs/TRIALS.md`, also and especially
+  for a null result), row into the studies index (§9), durable tools promoted (with OK), then the folder may be
+  deleted (with OK).
 
 ## 6. Tools (`bin/`), runs and provenance
 
