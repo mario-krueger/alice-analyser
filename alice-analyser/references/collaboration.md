@@ -133,6 +133,8 @@ When the owner corrects you, turn it into a durable rule right away: a memory en
 rule, **why** (the incident), and **how to apply** it. Examples:
 - an unasked `git init` → "no git without yes";
 - lost histogram comments in a refactor → "diff comments before committing";
+- a commit that only recorded a local reference refresh, with step labels and hashes → "write tracked text for a
+  stranger; no commit when they gain nothing";
 - CI nitpicks after a push → "reproduce every CI check locally, including demoted linter warnings, before proposing a PR";
 - repeated shell errors → "the shell is zsh; loops go into bash scripts";
 - workarounds for a missing tool → "ask for the install first".

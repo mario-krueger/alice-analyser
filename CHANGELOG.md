@@ -4,6 +4,11 @@ What changed for users between versions. Newest first.
 
 ## Unreleased
 
+- Git: write for the reader who was not there. What makes a commit useful and what is annoying or useless (private
+  step IDs and section numbers, unexplained hashes, dates of local events, commits that only document local
+  state, diary text in tracked files). Step IDs are no longer recommended in commit messages
+  (`references/analysis-design.md` §4, `SKILL.md`, `references/file-conventions.md`, `references/safety.md`).
+
 - Collaboration: "ask for a decision only after taking them along": context and purpose in plain words, the
   decision in one sentence and why now, options with consequences, recommendation, what happens next; questions that
   stand alone; stop and re-explain on "what is X?" (`SKILL.md` §1, `references/collaboration.md` §4, §7).

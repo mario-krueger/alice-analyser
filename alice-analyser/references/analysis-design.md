@@ -147,22 +147,44 @@ deliberate decision.
 Start every repo with a `.gitignore` (`assets/gitignore_template`). Check `git status` before each commit for files
 that slipped through.
 
-**Commit hygiene:**
-- One topic per commit. The message makes the state findable later:
+**Who reads the history.** People who were not there: a colleague, a reviewer, the owner in two years. They have
+the repo, not your notebook, your chat or your machine. A commit is worth making when it changes tracked work in a
+way such a reader needs to know; its message, and every tracked line it adds, must make sense to them.
+
+**Useful:**
+- One logical change per commit: one change a reader would want to find, review or revert on its own (not one item
+  of your to-do list). Verified before it is committed; the commit is the new known-good baseline.
+- A message that says what changes in the code's own words, then why and what was checked when that is not obvious:
   ```
   unfold: skip null mc non-closure lookup for triggered-only spectra      <- what, plain words
 
   syst crashed (exit 139) on the 5 triggered variants: the lookup of       <- why
   spectra that exist only in data/unfolded returned null.
-  crash fix only: framework regression 37/37 identical. step W2.           <- what was verified, step id
+  crash fix only: the regression on all published inputs is identical.     <- what was verified
   ```
-- The commit hash goes into the notebook finding that the commit belongs to. To revisit an old state:
-  `git worktree add ../<name> <hash>` (a separate checkout; the current work stays untouched).
-- Commit only verified states. The commit is the new known-good baseline.
+- Names a reader can look up: files, functions, options of the repo, or terms of the field.
+- The conventions of the repo you commit to (e.g. O2Physics `[PWGLF] <task>: …`) win over yours.
 - Branches for changes to shared code, made from the current upstream; small PRs; CI checks reproduced locally first.
-- Never commit local test-only patches. Keep them as `.patch` files and name them in the notebook handover.
-- Tag states behind published results.
-- Agents commit only with the user's explicit yes (SKILL.md).
+- Tags for states behind published results.
+- The notebook points to the commit (finding → hash), never the other way round. To revisit an old state:
+  `git worktree add ../<name> <hash>` (a separate checkout; the current work stays untouched).
+
+**Annoying or useless (don't):**
+- Private labels in anything tracked: notebook step IDs (`S4`, `W2`), section numbers (`§4.35`), names of local
+  folders or studies (`b8`), chat context ("as discussed"). Nobody outside can decode them, and in a year nobody inside.
+- Hashes of other repos or local states without saying what they are; dates of local events ("refreshed on …").
+- Commits that only document something outside git (a refreshed local reference, moved data, a run you did). That
+  belongs in the notebook or next to the local files (e.g. a `PROVENANCE.txt`).
+- Diary text in tracked files: "changed in step X", "was Y until Z", "new:" in comments, "last updated" lines.
+  Tracked docs describe the current state and how to use or remake things; the history is `git log`.
+- Save-point commits for trivia, a commit per check, chains of "fix the previous commit" (fold unpushed fix-ups
+  before sharing, with a yes) and, the other way round, a week of unrelated changes in one commit.
+- Generated files, absolute local paths, personal workarounds, local test-only patches (keep those as `.patch` files,
+  named in the notebook handover).
+
+**Before proposing a commit, read the diff and the message as that stranger:** what do they gain? Does every name,
+number and date mean something to them? Will every tracked line still be true after the next change? If they gain
+nothing, there is no commit to propose. Agents commit only with the user's explicit yes (SKILL.md).
 
 ## 5. Starting small
 

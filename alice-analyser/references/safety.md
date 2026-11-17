@@ -75,7 +75,8 @@ the `.gitignore`, a look at the diff).
 
 - No git actions without an explicit yes, in any repo: no `init`, `commit`, `branch`, `push`, `tag`, `stash`,
   `checkout` that changes the tree, no `pull`/update of a checkout with local changes.
-- Propose: which files, which message, why this split ("5 topic commits"). Track only useful files; never junk/legacy.
+- Propose: which files, which message, why this split ("5 topic commits"), and what a reader of the repo gains from
+  it (`analysis-design.md` §4). Track only useful files; never junk/legacy.
 - Before reporting a bug found in a local checkout of a shared repo: compare with upstream; the local copy may be behind.
 - Never commit local test-only patches (keep them as `.patch` files and named in the handover section).
 

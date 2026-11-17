@@ -119,8 +119,8 @@ that:
   environment and pinned dependency versions (`-D<Pkg>_DIR`, release + patch, O2Physics tag).
 - **Results by recipe:** every number comes from a kept script, never from an interactive session, and is recorded
   with its basis (sample, version, script, plots).
-- **Saved states:** each verified state committed (with a yes), with a findable message (what, why, what was
-  verified, step ID; `analysis-design.md` §4), its hash in the notebook. Published states tagged, published results
+- **Saved states:** each verified state committed (with a yes), with a message a stranger understands (what,
+  why, what was verified; no private labels; `analysis-design.md` §4), its hash in the notebook. Published states tagged, published results
   reproducible bit by bit (§2, §4).
 
 When convenience and reproducibility conflict, choose reproducibility and say so.

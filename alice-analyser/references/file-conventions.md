@@ -53,7 +53,8 @@ Status markers everywhere: ✅ done · 🔧 in progress · ⏳ next · 💬 need
   Trash and holding folders (`~/.Trash/<name>_<YYYYMMDD>`, `<data>_outdated_<YYYYMMDD>`).
 - **Step IDs:** a letter for the track plus a number (`B1` task fix, `S2` restructuring, `W2` workflow/tests, `U1`
   framework, `T1` tooling…), with a letter suffix for sub-steps (`W2b`). The same ID is used in the roadmap, the status
-  board, plan scripts (`docs/W2b_plan.sh`), the study step log ("Step B13") and the commit message.
+  board, plan scripts (`docs/W2b_plan.sh`) and the study step log ("Step B13"). IDs are private: never in commit
+  messages, tracked code, comments or tracked paths (`analysis-design.md` §4).
 - **Topic notes:** `docs/<topic>.md` for notes, `docs/<topic>_review.md` for reviews (`review_fresh.md` = an
   independent-agent review), `docs/<topic>_inventory.md` for read-only surveys, `docs/for_<person>.md` for points
   collected for a colleague, `docs/<topic>_proposal.md` for a design to approve.
