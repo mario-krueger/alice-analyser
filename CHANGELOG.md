@@ -4,6 +4,9 @@ What changed for users between versions. Newest first.
 
 ## Unreleased
 
+- Collaboration: "ask for a decision only after taking them along": context and purpose in plain words, the
+  decision in one sentence and why now, options with consequences, recommendation, what happens next; questions that
+  stand alone; stop and re-explain on "what is X?" (`SKILL.md` §1, `references/collaboration.md` §4, §7).
 - Verification: "think before you test". Checks are chosen by what a change can reach and run once each; reasoning
   may exclude what a change never executes, never what executed code computes. Fast-lane example in
   `references/verification.md` §5; the full rerun of published inputs stays mandatory inside the result path.

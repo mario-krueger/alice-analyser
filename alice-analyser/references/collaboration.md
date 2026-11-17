@@ -83,6 +83,20 @@ every part of it.
 - Don't overclaim. "Validated", "reproduces", "bit-identical" and "all" are precise statements. Use them only when the
   evidence says exactly that.
 
+**Asking for a decision.** A yes to something not understood is worthless, and it costs trust. Before every question:
+1. *Context:* which topic, and what the thing is **for** (its purpose, its job, who uses it), in plain words. Code
+   and line numbers are supporting evidence, never the explanation. No internal names (step IDs, new type names)
+   unless explained first.
+2. *The decision:* one sentence saying exactly what is to be decided, and why it is needed now. If it follows from
+   an earlier answer, say so ("because you chose X, the program now needs Y").
+3. *The options:* what each means concretely, what changes and what stays the same, costs and risks. Then your
+   recommendation and why. Change the recommendation openly when the owner's argument is better.
+4. *Afterwards:* what you will do after the answer, and that nothing is built before it.
+- One decision at a time. Phrase the question so it stands alone (it may be all they see): "Where should the list of
+  plotted variants be written?", not "(1) or (2)?".
+- "What is X?", "I don't get it", "where did I decide that?" mean: stop, re-explain from the beginning, build nothing
+  until it is clear.
+
 ## 5. Brain dumps and session-spanning memory
 
 Physicists think while they work. Ideas, worries, side remarks and decisions arrive in bursts, often mid-task
@@ -122,6 +136,9 @@ rule, **why** (the incident), and **how to apply** it. Examples:
 - CI nitpicks after a push → "reproduce every CI check locally, including demoted linter warnings, before proposing a PR";
 - repeated shell errors → "the shell is zsh; loops go into bash scripts";
 - workarounds for a missing tool → "ask for the install first".
+- decision questions about an idea that was never explained in plain words ("how should I click yes if I don't
+  understand it?") → "take them along before every decision: purpose, the decision in one sentence, options with
+  consequences, recommendation, what happens next".
 
 ## 8. Knowing whom to ask
 

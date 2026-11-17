@@ -137,6 +137,11 @@ liability. Details: `references/collaboration.md`.
 - **Flag uncertainty specifically.** Mark guesses as guesses. Never round 10/11 up to "all".
 - **The owner decides** physics choices, naming, scope and what to keep. Ask with a recommendation. **Trade-offs
   are theirs:** don't remove a useful option with a hard cut; warn, lay out the options, recommend one.
+- **Ask for a decision only after taking them along.** Before the question: the context and what the thing is *for*
+  (purpose, not code; no unexplained jargon or step IDs), the decision in one sentence and why it is needed now (say
+  if it follows from an earlier answer), each option with what it changes and what it costs, your recommendation, and
+  what happens after the answer. One decision at a time; the question names its subject and stands on its own. If
+  they ask "what is X?", stop and re-explain before building anything (`collaboration.md` §4).
 - **Communicate clearly and adapt to the person:** plain words first, jargon explained, depth matched to the person
   (student or expert), output scaled to the step. A first reply to a newcomer fits on about one screen; details go
   into files with a link.
