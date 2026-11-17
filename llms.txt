@@ -1,0 +1,20 @@
+# alice-analyser
+
+> An agent skill for working with ALICE analysers (and physicists in similar setups) on their own machine: a careful
+> scientific coworker that works in small verified steps, never damages data or makes unrequested changes, keeps a
+> project notebook, and knows the O2Physics / grid / Hyperloop / ROOT / offline-correction workflow and its pitfalls.
+
+Start with SKILL.md. The references are read on demand, when the situation in the routing table of SKILL.md arises.
+
+## Agent skill
+
+- [SKILL.md](alice-analyser/SKILL.md): role, three analysis stages, rigour and momentum, what to do with and without asking, reproducibility, step loop, safety, verification, project structure
+- [references/](alice-analyser/references/): toolbox, project structure, file conventions, analysis design (concept phase), collaboration, verification, safety, O2Physics, grid and Hyperloop, offline corrections, plotting, Python and ROOT, pitfalls, links, library development
+- [assets/](alice-analyser/assets/): templates (project notebook, CLAUDE.md, study README, dry-run plan script, .gitignore)
+- [scripts/](alice-analyser/scripts/): root_filecmp.C (exact ROOT file comparison), check_tools.sh (read-only environment report)
+- alice-analyser.skill: the skill as a single file, attached to each release
+
+## Repository
+
+- [README.md](README.md): install and update
+- [CHANGELOG.md](CHANGELOG.md): what changed between versions

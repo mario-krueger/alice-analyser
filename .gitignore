@@ -1,0 +1,7 @@
+# build output and local files
+dist/
+notes.md
+.DS_Store
+*_C.so
+*_C.d
+*.pcm

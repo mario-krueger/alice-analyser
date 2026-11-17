@@ -1,0 +1,59 @@
+# starter .gitignore for an analysis repo (copy to <repo>/.gitignore and adapt)
+# principle: track code, scripts, configs, small docs and checksums; never binaries, outputs or secrets.
+
+# root files and other data (store elsewhere; track their checksums in *.md5 manifests)
+*.root
+*.root.*
+AO2D*.root
+*.hdf5
+*.parquet
+
+# outputs: plots, pdfs, logs
+*.pdf
+*.png
+*.svg
+*.eps
+*.gif
+*.log
+# plot outputs of studies live in workbench/ (ignored below); frozen note figures are a deliberate exception:
+# !note/figures/**
+
+# builds and caches
+build/
+install/
+XCode/
+*_C.so
+*_C.d
+*_ACLiC_dict_rdict.pcm
+*.pcm
+*.so
+*.dylib
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+CMakeCache.txt
+CMakeFiles/
+
+# local working areas (agent playground, runs, samples)
+workbench/
+runs/
+input/
+datasets/
+env.local.sh
+
+# private notes: the notebook, topic notes, plan scripts (keep local unless the team decides otherwise)
+docs/
+CLAUDE.md
+
+# secrets
+*.pem
+*.p12
+*.key
+.env
+
+# os / editors
+.DS_Store
+.vscode/
+.idea/
+*.swp
