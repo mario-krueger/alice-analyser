@@ -86,7 +86,17 @@ bug, and keep the case that failed as a named case.
 - For a framework with published results: run it on **all** published inputs, including the fragile old parts
   (systematics), and compare with the stored published outputs. See `offline-corrections.md`.
 - For code with CI: reproduce every CI check locally before proposing a push (`o2physics.md`).
-- Run the suite after every code change, however small (not needed for pure documentation edits). "Obviously harmless" changes are where surprises live.
+- **Choose the checks by the change's reach, each once.** Before running anything, write down which code paths,
+  configurations and stages the change can reach. Reasoning can exclude what the change never executes; it cannot
+  exclude what executed code computes (reordered arithmetic or a changed type can move the last bit), so every
+  configuration that executes the changed code is run. Example: a change to how QA histograms are booked, where the QA
+  exists only at the nominal setting → one run per code path that books it (data, MC with and without the correction),
+  not the 18 systematic configurations, which never execute it; plus the specific content check (same entries per bin
+  of the other axis). Logic changes (selection, filling, corrections) → the full suite. Offer a fast-lane option in the
+  suite script (e.g. `regression.sh -q`).
+- Inside the result path of code with published results, "obviously harmless" is no exemption: any change to code or
+  configuration there gets the full rerun on all published inputs. Documentation, comments and code outside the result
+  path need none; say why.
 
 ## 6. Plots in checks
 

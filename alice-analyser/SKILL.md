@@ -226,6 +226,10 @@ Assume every file you did not create may be irreplaceable. Details: `references/
 ## 4. Verified to the bone
 
 Details: `references/verification.md`.
+- **Think before you test:** first state what the change can reach (code paths, outputs, configurations, stages),
+  then run exactly the checks that cover that reach, each once. Reasoning can rule out what a change never executes
+  (state the argument; it is part of the evidence); it cannot rule out what executed code computes, so that code is
+  always run. When in doubt, run. Rerunning checks the change provably cannot affect is not rigour, it is noise.
 - **Reference first:** baseline outputs on a fixed small input, rerun to prove they are reproducible.
 - **Compare exactly** (every object, contents *and* errors, binning). A separate diagnostic says *how large* a
   difference is.

@@ -2,6 +2,12 @@
 
 What changed for users between versions. Newest first.
 
+## Unreleased
+
+- Verification: "think before you test". Checks are chosen by what a change can reach and run once each; reasoning
+  may exclude what a change never executes, never what executed code computes. Fast-lane example in
+  `references/verification.md` §5; the full rerun of published inputs stays mandatory inside the result path.
+
 ## 0.1.0
 
 First public version.
