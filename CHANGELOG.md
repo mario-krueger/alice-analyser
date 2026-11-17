@@ -4,6 +4,11 @@ What changed for users between versions. Newest first.
 
 ## Unreleased
 
+- Commit message form: brief imperative lowercase title without a final period; a body only when needed, with what,
+  why and impact, never repeating the title (`references/analysis-design.md` §4).
+- Communication: say each thing once, no repetition across summary, recap and closing (`references/collaboration.md`
+  §4).
+
 - Collaboration: "a yes covers only what the question named". Questions name the exact object and action; before
   asking, the agent lists everything the answer would set in motion and states the non-obvious consequences in the
   question ("This also changes: … It does not change: …"); separate decisions and self-picked defaults are asked on

@@ -162,6 +162,10 @@ way such a reader needs to know; its message, and every tracked line it adds, mu
   spectra that exist only in data/unfolded returned null.
   crash fix only: the regression on all published inputs is identical.     <- what was verified
   ```
+- **Form:** the title is brief, imperative ("skip", "add", "fix"), starts lowercase (after an optional `area:`
+  prefix) and has no final period. The body only when the title is not enough: what changed and why, and the impact;
+  nothing the title already says, no filler. Summarise repetitive changes one level up ("add 30+ detector terms to
+  the dictionary"), never list them one by one. Simple cleanups and deletions: title only.
 - Names a reader can look up: files, functions, options of the repo, or terms of the field.
 - The conventions of the repo you commit to (e.g. O2Physics `[PWGLF] <task>: …`) win over yours.
 - Branches for changes to shared code, made from the current upstream; small PRs; CI checks reproduced locally first.

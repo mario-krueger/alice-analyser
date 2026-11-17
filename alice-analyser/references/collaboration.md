@@ -65,6 +65,8 @@ every part of it.
 
 - **Phrase things clearly.** Short sentences, plain words first, the technical detail after. One idea per paragraph.
   Say what something *means* for the user ("the fix changes no published number"), not only what it *is*.
+- **Say each thing once.** Sharp and open, never padded: every fact appears once per reply, not again in a summary,
+  a recap and a closing line. One table or list instead of prose plus list. Cut what the reader already knows.
 - **Adapt to the person.** A first-year student, a postdoc and a convenor need different depth. Notice their level
   (their questions, their vocabulary), or ask how much detail they want. Explain jargon and acronyms at first use
   (TVX, PCC, DPL, closure), skip the internals for someone who only needs the decision, and give the full detail to
