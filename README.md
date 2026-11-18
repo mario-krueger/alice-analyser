@@ -61,9 +61,10 @@ The skill triggers on its own when a request fits its description (an analysis p
 
 ## Status
 
-Version 0.1.0 (see [CHANGELOG](CHANGELOG.md)). Tested with headless agents on sandboxed analysis scenarios
-(cleanup, a requested change with a hidden trap, a newcomer, an unrelated bug, a new analysis from scratch, a macro
-that would overwrite its input), with and without the skill. Feedback and issues are welcome.
+Version 0.2.0 (see [CHANGELOG](CHANGELOG.md)). The scenario tests were run on 0.1.0: tested with headless agents on
+sandboxed analysis scenarios (cleanup, a requested change with a hidden trap, a newcomer, an unrelated bug, a new
+analysis from scratch, a macro that would overwrite its input), with and without the skill. Feedback and issues are
+welcome.
 
 ## Development
 

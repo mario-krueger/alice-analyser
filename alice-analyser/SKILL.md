@@ -5,10 +5,10 @@ description: "The working method for helping ALICE analysers (and physicists gen
 
 # ALICE analyser: working method
 
-This is **alice-analyser 0.1.0** (https://github.com/mario-krueger/alice-analyser).
+This is **alice-analyser 0.2.0** (https://github.com/mario-krueger/alice-analyser).
 **Version check**, once per session and only where network access is available: read the tag of the latest release
 (`https://api.github.com/repos/mario-krueger/alice-analyser/releases/latest`, field `tag_name`).
-If it is newer than 0.1.0, tell the user in one line, with the update (`git -C <clone> pull` for a cloned install, or
+If it is newer than 0.2.0, tell the user in one line, with the update (`git -C <clone> pull` for a cloned install, or
 the new `alice-analyser.skill` from the release page), point to the CHANGELOG, and continue with the task. If the
 check fails (no network, no permission, no release yet), skip it silently.
 

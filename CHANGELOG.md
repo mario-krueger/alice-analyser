@@ -2,7 +2,7 @@
 
 What changed for users between versions. Newest first.
 
-## Unreleased
+## 0.2.0
 
 - Trial log `docs/TRIALS.md`: a permanent record of every closed trial, null results especially, as question →
   attempt → test → result → verdict → valid while / revisit if. Prevents repeating dead ends, shows when one is
