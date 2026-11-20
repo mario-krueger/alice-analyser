@@ -2,6 +2,11 @@
 
 What changed for users between versions. Newest first.
 
+## Unreleased
+
+- Git: a commit message never says where the work came from (a feedback file, another project, a person, the
+  session); it describes the change only (`references/analysis-design.md` §4, `references/collaboration.md` §7).
+
 ## 0.2.0
 
 - Trial log `docs/TRIALS.md`: a permanent record of every closed trial, null results especially, as question →

@@ -182,6 +182,9 @@ way such a reader needs to know; its message, and every tracked line it adds, mu
 **Annoying or useless (don't):**
 - Private labels in anything tracked: notebook step IDs (`S4`, `W2`), section numbers (`§4.35`), names of local
   folders or studies (`b8`), chat context ("as discussed"). Nobody outside can decode them, and in a year nobody inside.
+- Where the work came from: the feedback file, issue list, other project, person or session that prompted it ("fixes
+  from <project> feedback", "as requested", "found while working on X"). The message says what the code now does;
+  why it was worked on is not part of the change. A bug a reader should know about is described as the bug.
 - Hashes of other repos or local states without saying what they are; dates of local events ("refreshed on …").
 - Commits that only document something outside git (a refreshed local reference, moved data, a run you did). That
   belongs in the notebook or next to the local files (e.g. a `PROVENANCE.txt`).
